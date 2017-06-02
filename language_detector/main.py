@@ -4,18 +4,9 @@ from languages import LANGUAGES
 from collections import Counter
 
 
-"""This is the entry point of the program."""
-
-def counter_example(a_dictionary):
-    
-    c = Counter(a_dictionary.split(' '))
-    print(c.most_common())
-
-
 def detect_language(text, languages):
     """Returns the detected language of given text."""
 
-    
     count = {}
     for language in languages:
         matches = (len(set(text.split(' ')) & set(language['common_words'])))
